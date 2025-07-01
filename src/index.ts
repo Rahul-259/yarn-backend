@@ -124,6 +124,6 @@ app
 
     return c.json(result);
   });
-app.use("*", serveStatic({ root: "../dist" }));
-app.use("*", serveStatic({ path: "../dist/index.html" }));
+app.use("*", serveStatic({ root: "./dist" }));
+app.use("*", serveStatic({ path: "./dist/index.html" }));
 export default { fetch: app.fetch, port: process.env.PORT || 5000 };
