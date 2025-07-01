@@ -23249,8 +23249,8 @@ app.basePath("/api").get("/", (c) => {
   const result = await db.select().from(mainOrders).where(eq(mainOrders.customerId, Number(id))).innerJoin(customers, eq(customers.id, mainOrders.customerId)).innerJoin(products, eq(products.id, mainOrders.productId)).innerJoin(mills, eq(mills.id, mainOrders.millId));
   return c.json(result);
 });
-app.use("*", serveStatic2({ root: "../dist" }));
-app.use("*", serveStatic2({ path: "../dist/index.html" }));
+app.use("*", serveStatic2({ root: "./dist" }));
+app.use("*", serveStatic2({ path: "./dist/index.html" }));
 var src_default = { fetch: app.fetch, port: process.env.PORT || 5000 };
 export {
   src_default as default
