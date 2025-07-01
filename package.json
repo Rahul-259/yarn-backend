@@ -2,7 +2,7 @@
   "name": "backend",
   "scripts": {
     "dev": "bun run --hot src/index.ts",
-    "build": "bun build ./src/index.ts --outdir ./build",
+    "build": "pnpm install && bun build ./src/index.ts --outdir ./build",
     "start": "bun run ./build/index.js"
   },
   "dependencies": {

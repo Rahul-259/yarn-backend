@@ -23251,7 +23251,7 @@ app.basePath("/api").get("/", (c) => {
 });
 app.use("*", serveStatic2({ root: "../frontend_final/dist" }));
 app.use("*", serveStatic2({ path: "../frontend_final/dist/index.html" }));
-var src_default = { fetch: app.fetch, port: 5000 };
+var src_default = { fetch: app.fetch, port: process.env.PORT || 5000 };
 export {
   src_default as default
 };
